@@ -1,5 +1,7 @@
 # ⛳ EagleEye Setup Tool & Ecosystem
 
+> **Public repository scope:** This repository contains project documentation and screenshots only. Source code, build files, and runnable binaries are not included in this checkout. Implementation details below describe the project and cannot be independently verified from this repository.
+
 An integrated C# / .NET solution designed for controlling high-speed stereo vision sensors, broadcasting real-time ball detection telemetry via UDP, automated patch launcher operations, and managing cloud/server data resources.
 
 
@@ -88,7 +90,9 @@ The `ControlV` module parses incoming newline-delimited strings from the camera 
 
 ---
 
-## 🛠️ Getting Started & Usage Guide
+## 🛠️ Usage with a Separately Supplied Application Package
+
+The following workflow describes the implementation; the executables and configuration files are not included in this repository. IP addresses and server URLs are examples and must match the deployment.
 
 ### Prerequisites
 * **OS:** Windows 10 / 11
@@ -113,7 +117,11 @@ The `ControlV` module parses incoming newline-delimited strings from the camera 
 
 4. **Server Data Management:**
    * Click **로그 전송 (Upload Logs)** within the `ControlV` interface.
-   * Select the target image directory, enter contextual developer comments, and submit. The application
+   * Select the target image directory, enter contextual developer comments, and submit the archive to the configured upload endpoint.
 
 
 <img width="1286" height="953" alt="image" src="https://github.com/user-attachments/assets/d5bb130f-3d89-45d6-a7b1-79863f34459d" />
+
+## Integration scope
+
+The static version-file and ZIP endpoints above describe this launcher workflow. The related [EagleEye web project](https://github.com/jelis86/EagleEye_web_public) documents a JSON release API; compatibility or migration between these update mechanisms is not established by the public documentation. Confirm the deployed launcher/server contract before integration.
